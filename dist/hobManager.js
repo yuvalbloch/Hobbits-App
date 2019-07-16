@@ -1,4 +1,4 @@
-class hobManger{
+class hobManager{
     constructor() {
         this.user = {}
     }

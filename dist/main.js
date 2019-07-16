@@ -1,6 +1,6 @@
 let username = "Dani"
-const hobManager = new hobManager()
-const renderer = new renderer
+const HobManager = new hobManager()
+const Renderer = new renderer
 
 // function greet(){
     
@@ -17,6 +17,8 @@ $('#updateButton').on('click', function(){
         floors: floors,
         smiles: smiles
     }
-    hobManager.saveData(newData,username)
-    renderer.renderData(hobManager.data)
+    console.log(newData)
+    HobManager.saveData(newData,username)
+    Renderer.renderData(HobManager.user)
 })
+HobManager.compare()

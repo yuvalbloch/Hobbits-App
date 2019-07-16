@@ -2,29 +2,30 @@ class hobManager{
     constructor() {
         this.user = {}
     }
-    saveData(data,userName ) {
-        const  status = {
+
+    saveData(data, userName ) {
+        const status = {
             userName: userName,
             date: new Date(),
-            healtyFood: data.vegetabels + data.water,
-            sport: data.floor,
+            healtyFood: data.vegetables + data.water,
+            sport: data.floors,
             smiles: data.smiles,
         }
 
         this.user = status
         $.ajax({
-            type: "put",
-            url: "/updateuser/:" +userName ,
+            type: "PUT",
+            url:  `/updateuser/${userName}`,
             data: status,
-            success: function (data) {
+            success: function () {
                 console.log("sucses")
             },
         });
 
     }
-    compare () {
-        $.get('/users' , function () {
-
-        })
+    async compare () {
+        console.log("in")
+        const users = await $.get("/users")
+        console.log(users)
     }
 }

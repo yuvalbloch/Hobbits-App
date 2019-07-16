@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,42 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Hobbits App</title>
 </head>
+
 <body>
-    <div id="head">
-    <h1 id="header">Hobbits</h1>
-    <div id="welcomeUser"></div>
+    <div class="head">
+        <h1 id="title">Hobbits</h1>
+        <h2 id="slogen">make your habits, a hobby</h2>
+        <div id="welcomeUser"></div>
+        <div id="info">
+            <input id="insertWater" type="number" placeholder="how many glasses of water did you have today?">
+            <input id="insertVeg" type="number" placeholder="how many vegetables did you ate tday?">
+            <input id="insertFood" type="number" placeholder="how many sports activites did you have today?">
+            <input id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
+            <button id="updateButton">Send!</button>
+        </div>
     </div>
-    <div id="info">
-    <input id="insertWater" type="number" placeholder="how many glasses of water did you have today?">
-    <input id="insertVeg" type="number" placeholder="how many vegetables did you ate tday?">
-    <input id="insertFood" type="number" placeholder="how many sports activites did you have today?">
-    <input id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
-    <button id="updateButton">Send!</button>
+
+    <div id="userContainer">
+        <div id="userDay"></div>
+        <div id="best hobbits of the day!"></div>
     </div>
 
     <script id="hobbies-template" type="text/x-handlebars-template">
         <div class="Hobbit"></div>
-        <h1>userName: {{userName}}</h1>
+        <h1>Hobbit name: {{userName}}</h1>
         <p>today's date:{{date}}</p>
         <p>today's healty food:{{healtyFood}}</p>
         <p>today's sports activites:{{sport}}</p>
         <p>today's smiles: {{smiles}}</p>  
     </script>
 
-    <div id="hobbits"></div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="renderer.js"></script>
     <script src="hobManager.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

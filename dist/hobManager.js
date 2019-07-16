@@ -1,4 +1,4 @@
-class hobManager{
+class hobManager {
     constructor() {
         this.user = {}
     }
@@ -7,7 +7,7 @@ class hobManager{
         const status = {
             userName: userName,
             date: new Date().getTime(),
-            healtyFood: data.vegetables + data.water,
+            healtyFood: parseInt(data.vegetables) + parseInt(data.water),
             sport: data.floors,
             smiles: data.smiles,
         }
@@ -15,10 +15,10 @@ class hobManager{
         this.user = status
         $.ajax({
             type: "PUT",
-            url:  `/updateuser/${userName}`,
+            url: `/updateuser/${userName}`,
             data: status,
             success: function () {
-                console.log("sucses")
+                console.log("success")
             },
         });
 

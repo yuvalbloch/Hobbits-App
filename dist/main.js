@@ -21,5 +21,5 @@ $('#updateButton').one('click', function () {
 })
 
 function greet(user) {
-    $("#welcomeUser").append(`<p>Welcome back: ${user}</p>`)
+    $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }

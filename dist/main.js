@@ -1,4 +1,4 @@
-let username = "Dani"
+let username = "Gilad"
 const HobManager = new hobManager()
 const Renderer = new renderer
 
@@ -17,3 +17,4 @@ $('#updateButton').on('click', function(){
     HobManager.saveData(newData,username)
     Renderer.renderData(HobManager.user)
 })
+

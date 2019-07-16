@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hobbits App</title>
+</head>
+<body>
+    <div id="info">
+    <input id="insertWater" type="number" placeholder="how many glasses of water did you have today?">
+    <input id="insertVeg" type="number" placeholder="how many vegetables did you ate tday?">
+    <input id="insertFood" type="number" placeholder="how many sports activites did you have today?">
+    <input id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
+    <button id="updateButton">Send!</button>
+    </div>
+
+    <script id="hobbies-template" type="text/x-handlebars-template">
+        <div class="Hobbit"></div>
+        <h1>{{userName}}</h1>
+        <p>{{date}}</p>
+        <p>{{healtyFood}}</p>
+        <p>{{sport}}</p>
+        <p>{{smiles}}</p>  
+    </script>
+
+    <div id="hobbits"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="renderer.js"></script>
+    <script src="hobManager.js"></script>
+</body>
+</html>

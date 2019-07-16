@@ -10,16 +10,16 @@ body {
     display: grid;
     grid-template-rows: repeat(1,4fr);
     margin-bottom: 20px;
-    background-size: 100vw 60vh;
-    margin: 0;
 }
 
 #title{
     text-align: center;
     font-weight: bold;
-    color: white;
-    font-size: 50px;
+    color: transparent;
+    font-size: 80px;
     text-shadow: 8px 8px 8px black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
     font-family: 'Poppins';
 }
 
@@ -48,14 +48,14 @@ body {
 }
 #userContainer{
     display: grid;
-    margin: 0;
     grid-template-columns: 1fr 1fr;
 }
 .Hobbit{
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(232,218,232,1);
--moz-box-shadow: 10px 10px 5px 0px rgba(232,218,232,1);
-box-shadow: 10px 10px 5px 0px rgba(232,218,232,1);
+    -webkit-box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
+    -moz-box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
+    box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
     font-family: 'Poppins';
 font-weight: bold;
-background-image: linear-gradient(to left, #fa709a 0%, #fee140 100%);
+width: 600px;
+margin: 20px;
 }

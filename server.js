@@ -13,6 +13,6 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 mongoose.connect('mongodb://localhost/HobbitsDB', { useNewUrlParser: true })
 
 const port = 3000
-app.listen(port, function(){
+app.listen(port, function () {
     console.log("server started on port: " + port)
 })

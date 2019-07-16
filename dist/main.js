@@ -1,6 +1,7 @@
 let username = "Dani"
 const HobManager = new hobManager()
 const Renderer = new renderer
+
 greet(username)
 
 $('#updateButton').on('click', function(){

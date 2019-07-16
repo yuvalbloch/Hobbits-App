@@ -2,10 +2,6 @@ let username = "Dani"
 const hobManager = new hobManager()
 const renderer = new renderer
 
-// function greet(){
-    
-// }
-
 $('#updateButton').on('click', function(){
     let water = $(this).siblings('#insertWater').val()
     let vegetables = $(this).siblings('#insertVeg').val()

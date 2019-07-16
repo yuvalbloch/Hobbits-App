@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const status = new Schema({
     userName: String,
-    date: Date,
+    date: Number,
     healtyFood: Number,
     sport: Number,
     smiles: Number,

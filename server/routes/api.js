@@ -2,7 +2,8 @@ const express = require('express')
 const router = express.Router()
 const request = require('request')
 const user = require('../models/hobbits')
-
+const Router = require('./requests')
+// router.use("/qoute", Router)
 router.get('/users', function (req, res) {
     user.find({}).exec(function (err, users) {
         res.send(users)

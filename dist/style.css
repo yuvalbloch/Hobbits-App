@@ -15,9 +15,11 @@ body {
 #title{
     text-align: center;
     font-weight: bold;
-    color: white;
-    font-size: 50px;
+    color: transparent;
+    font-size: 80px;
     text-shadow: 8px 8px 8px black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
     font-family: 'Poppins';
 }
 
@@ -53,5 +55,7 @@ body {
     -moz-box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
     box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
     font-family: 'Poppins';
-font-weight: bold
+font-weight: bold;
+width: 600px;
+margin: 20px;
 }

@@ -3,7 +3,7 @@ class hobManager{
         this.user = {}
     }
     saveData(data,userName ) {
-        const status = {
+        const  status = {
             userName: userName,
             date: new Date(),
             healtyFood: data.vegetabels + data.water,

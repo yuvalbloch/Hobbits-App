@@ -6,7 +6,7 @@ class hobManager {
         const status = {
             userName: userName,
             date: new Date(),
-            healtyFood: data.vegetables + data.water,
+            healtyFood: parseInt(data.vegetables) + parseInt(data.water),
             sport: data.floors,
             smiles: data.smiles,
         }

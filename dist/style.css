@@ -2,8 +2,6 @@ body {
     text-align: center;
     height: 100vh;
     display: grid;
-    background-image: url('')
-    background-color: bisque;
   }
 
 #title{

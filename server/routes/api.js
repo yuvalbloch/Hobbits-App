@@ -17,6 +17,7 @@ router.post('/user', function (req, res) {
 })
 
 router.put('/updateuser/:userName', function (req, res) {
+    console.log('in')
     let userName = req.params.userName
     let healthStatus = req.body
     user.findOne({ userName: userName }, function (err, user) {

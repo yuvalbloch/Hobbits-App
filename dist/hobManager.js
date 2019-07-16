@@ -10,7 +10,8 @@ class hobManager{
             sport: data.floor,
             smiles: data.smiles,
         }
-        data.date = new Date()
+
+        this.user = status
         $.ajax({
             type: "put",
             url: "/updateuser/:" +userName ,
@@ -21,7 +22,7 @@ class hobManager{
         });
 
     }
-    getUserData() {
+    compare () {
         $.get('/users' , function () {
 
         })

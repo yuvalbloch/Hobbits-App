@@ -10,6 +10,8 @@ body {
     display: grid;
     grid-template-rows: repeat(1,4fr);
     margin-bottom: 20px;
+    background-size: 100vw 60vh;
+    margin: 0;
 }
 
 #title{
@@ -46,6 +48,7 @@ body {
 }
 #userContainer{
     display: grid;
+    margin: 0;
     grid-template-columns: 1fr 1fr;
 }
 .Hobbit{
@@ -53,5 +56,6 @@ body {
 -moz-box-shadow: 10px 10px 5px 0px rgba(232,218,232,1);
 box-shadow: 10px 10px 5px 0px rgba(232,218,232,1);
     font-family: 'Poppins';
-font-weight: bold
+font-weight: bold;
+background-image: linear-gradient(to left, #fa709a 0%, #fee140 100%);
 }

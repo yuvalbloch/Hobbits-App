@@ -22,6 +22,6 @@ $('#updateButton').one('click', function () {
 HobManager.compare()
 
 function greet(user) {
-    $("#welcomeUser").append(`<p>Welcome back: ${user}</p>`)
+    $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }
 

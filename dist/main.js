@@ -1,10 +1,7 @@
 let username = "Dani"
 const HobManager = new hobManager()
 const Renderer = new renderer
-
-// function greet(){
-    
-// }
+greet(username)
 
 $('#updateButton').on('click', function(){
     let water = $(this).siblings('#insertWater').val()
@@ -21,3 +18,7 @@ $('#updateButton').on('click', function(){
     HobManager.saveData(newData,username)
     Renderer.renderData(HobManager.user)
 })
+
+function greet(user){
+    $("#welcomeUser").append(`<p>Welcome back: ${user}</p>`)
+}

@@ -9,4 +9,4 @@ class renderer {
         let someHTML = template(todayData)
         $("#userDay").append(someHTML)
     }
-} 
+ } 

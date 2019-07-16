@@ -1,13 +1,12 @@
-class renderer{
-    constructor(){
+class renderer {
+    constructor() {
 
     }
-    renderData(todayData){
-        $("#hobbits").empty()
+    renderData(todayData) {
         console.log(todayData)
-        const source   = $("#hobbies-template").html()
+        const source = $("#hobbies-template").html()
         const template = Handlebars.compile(source);
         let someHTML = template(todayData)
-        $("#hobbits").append(someHTML)
+        $("#userDay").append(someHTML)
     }
 } 

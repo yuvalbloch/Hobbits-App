@@ -1,8 +1,8 @@
-class hobManager{
+class hobManager {
     constructor() {
         this.user = {}
     }
-    saveData(data, userName ) {
+    saveData(data, userName) {
         const status = {
             userName: userName,
             date: new Date(),
@@ -14,16 +14,16 @@ class hobManager{
         this.user = status
         $.ajax({
             type: "PUT",
-            url:  `/updateuser/${userName}`,
+            url: `/updateuser/${userName}`,
             data: status,
             success: function () {
-                console.log("sucses")
+                console.log("success")
             },
         });
 
     }
-    compare () {
-        $.get('/users' , function () {
+    compare() {
+        $.get('/users', function () {
 
         })
     }

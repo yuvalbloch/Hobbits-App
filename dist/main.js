@@ -18,4 +18,5 @@ $('#updateButton').on('click', function(){
         smiles: smiles
     }
     hobManager.saveData(newData,username)
+    renderer.renderData(hobManager.data)
 })

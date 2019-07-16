@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    height: 100vh;
+    display: grid;
+    background-color: bisque;
+  }
+
+#header{
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    padding: 25px;
+    margin-top: 30px; 
+    color: white;
+    text-shadow: 8px 8px 8px black;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Sniglet', cursive;
+    font-size: 90px;
+}
+#welcomeUser{
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Sniglet', cursive;
+    font-size: 30px;
+    text-shadow: 8px 8px 8px brown;
+    color: white;
+}
+#hobbits

@@ -24,23 +24,23 @@
             <button id="updateButton">Send!</button>
         </div>
     </div>
-
     <div id="userContainer">
         <div id="userDay"></div>
         <div id="best"></div>
     </div>
+    <canvas id="myChart" width="100px" height="100px"><p></p></canvas>
    
     <script id="hobbies-template" type="text/x-handlebars-template">
         <div class="Hobbit">
-        <h1>Hobbit name: {{userName}}</h1>
-        <p>today's healty food:{{healtyFood}}</p>
-        <p>today's sports activites:{{sport}}</p>
+        <h1>Hobbit's name: {{userName}}</h1>
+        <p>today's healthy food:{{healtyFood}}</p>
+        <p>today's sports activities:{{sport}}</p>
         <p>today's smiles: {{smiles}}</p>  
     </div>
     </script>
     <script id="bests-template" type="text/x-handlebars-template">
         <div>
-            <ol>best in helathi food
+            <ol>best in healthy food
                 {{#each bestsInFood}}
             <li>{{this.userName}}</li>
                 {{/each}}
@@ -50,7 +50,7 @@
                 <li>{{this.userName}}</li>
                 {{/each}}
             </ol>
-            <ol>the most smily hobit today
+            <ol>the most smiling hobbit today
                 {{#each bestsInSmile}}
                 <li>{{this.userName}}</li>
                 {{/each}}
@@ -62,6 +62,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src ="randerChatres.js"></script>
     <script src="renderer.js"></script>
     <script src="hobManager.js"></script>
     <script src="main.js"></script>

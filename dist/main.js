@@ -28,12 +28,13 @@ function greet(user) {
 }
 
 
+
 // $.get('/qoute', function(res){
 //     const qoute = JSON.parse(res.body).contents.quotes[0].quote
 //     dailyQoute = qoute
 //     $("#qoutes").append(`<p>${dailyQoute}</p>`)
 // })
-
+paint([2,3,5,4,3] ,[5,4,4,3,4])
 
 async function loadPage(){
 let today = new Date().getTime()/86400000
@@ -43,6 +44,6 @@ statuses = statuses[0].status.filter(s=>s.date/86400000+0.5 > today)
 console.log(statuses[0])
 if(statuses[0]) {
     Renderer.renderData(statuses[0])
-    $('#info').hide()
+//    $('#info').hide()
 }
 }

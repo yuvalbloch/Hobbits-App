@@ -5,9 +5,6 @@ let dailyQoute
 const tasks = ["Say good morning to: ", "give a nice compliment to: ", "ask about the day of: ", "what do you think about launch with: ", "did you already spoken to: "]
 
 
-greet(username)
-loadPage(username)
-peaceandlove()
 
 $('#updateButton').one('click', function () {
     let water = $(this).siblings('#insertWater').val()
@@ -60,4 +57,16 @@ if(statuses[0]) {
 }}
 $("body").on("click", "#showChart", function(){
     HobManager.getCharts(username)
+})
+$("#update").on("click" ,function () {
+    const newUserName = $("#newUser").val()
+    const newpassWord = $("#newPass").val()
+    const newcompany= $("#newComp").val()
+    HobManager.createUser(newUserName,newpassWord,newcompany)
+})
+
+$("#signInButton").on("click" ,function () {
+    const newUserName = $("#exsistUser").val()
+    const newpassWord = $("#exsistPass").val()
+    HobManager.exsistUsers(newUserName,newpassWord)
 })

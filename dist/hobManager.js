@@ -68,4 +68,28 @@ class hobManager {
         paint(dates,sportData, "sportChart")
         paint(dates,smilesData,"smilesChart")
     }
+    createUser(name , password ,company)
+    {
+        const obj = {
+            isManager : true,
+            company: company,
+            userName: name,
+            password:  password,
+
+        }
+        $.post("/user" , obj )
+    }
+    async exsistUsers(name, password){
+       const users = await $.get('/users')
+       const user = users.find( u => u.userName == name)
+       if(user){
+           if(user.password == password){
+            username =name 
+            $("#sign").hide()
+            greet(username)
+            loadPage(username)
+            peaceandlove()
+           }
+       }
+    }
 }

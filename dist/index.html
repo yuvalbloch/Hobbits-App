@@ -13,7 +13,22 @@
 </head>
 
 <body>
+<div id="sign">
+    <h1>Hobbits app</h1>
+    <h2> Welcome User</h2>
+    <div id="signUp">
+        <input type="text" placeholder="Choose a user name" id = "newUser">
+        <input type="password" placeholder="Choose a password" id = "newPass">
+        <input type="text place" placeholder="Write you Company's name" id = "newComp"><button id = "update">Send!</button>
+    </div>
+    <div id="signIn">
+        <input type="text" placeholder="Whats your user name?" id="exsistUser">
+        <input type="password" placeholder="write your a password" id= "exsistPass">
+        <button id="signInButton">Send!</button>
+    </div>
+</div>
     <div class="head">
+
         <div class="right">
             <div id="welcomeUser"></div>
             <div id="qoutes"></div>
@@ -61,6 +76,7 @@
         <p>today's healthy food:{{healtyFood}}</p>
         <p>today's sports activities:{{sport}}</p>
         <p>today's smiles: {{smiles}}</p>
+
         <i class="fas fa-chart-bar" id="showChart"></i>
     </div>
     </script>

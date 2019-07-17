@@ -2,7 +2,6 @@ body {
     text-align: center;
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr  3fr 3fr;
     padding: 0;
     margin: 0;
   }
@@ -63,14 +62,22 @@ body {
     font-weight: bold;
     /* font-size: 20px; */
     color: white;
-    font-family: 'Indie Flower';
+    font-family: 'Josefin Slab';
+}
+
+#qoutes{
+    text-align: center;
+    font-weight: bold;
+    /* font-size: 20px; */
+    color: white;
+    font-family: 'Josefin Slab';
 }
 #slogen{
     text-align: center;
     font-weight: bold;
     /* font-size: 20px; */
     color: white;
-    font-family: 'Indie Flower';
+    font-family: 'Josefin Slab';
     text-decoration: underline;
 }
 
@@ -104,8 +111,9 @@ color:#ffffff;
 font-size: 1.5em;
 cursor: pointer;
 background-color: #fe4902;
-border-radius: 10%;
+border-radius: 15%;
 color:white;    
+padding:5px;
 }
 #showChart:hover {
 	background-color:tomato;
@@ -117,7 +125,7 @@ color:white;
 
 #nicethingsSection{
     font-weight: bold;
-    font-family: 'Indie Flower';
+    font-family: 'Josefin Slab';
 }
 
 .avatar {
@@ -130,7 +138,7 @@ color:white;
 	background-color:#fe4902;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
-	border-radius: 20%;
+	border-radius: 15%;
 	border:1px solid tomato;
     display:inline-block;
     font-size: 18px;
@@ -138,6 +146,7 @@ color:white;
 	color:#ffffff;
 	text-decoration:none;
     text-shadow:0px 1px 0px tomato;
+    padding:5px;
 }
 #updateButton:hover {
 	background-color:tomato;

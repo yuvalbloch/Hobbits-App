@@ -48,4 +48,4 @@ if(statuses[0]) {
 }
 $("#showChart").on("click", "body", function(){
     getChart(username)
-})
+})}

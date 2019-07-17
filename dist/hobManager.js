@@ -55,15 +55,20 @@ class hobManager {
         let userObject = data.filter(u => u.userName == username)
         console.log(userObject)
         let healthData = userObject[0].status.map(s => s.healtyFood)
-        console.log(healthData.length-5)
-        healthData = healthData.splice(0, (healthData.length - 5))
+        if (healthData.length >5) {
+            healthData = healthData.splice(0, (healthData.length - 5))
+        }
         console.log(userObject)
         let sportData = userObject[0].status.map(s => s.sport)
-        sportData = sportData.splice(0, sportData.length - 5)
-
+        if (sportData.length > 5) {
+            sportData = sportData.splice(0, sportData.length - 5)
+        }
         let smilesData = userObject[0].status.map(s => s.smiles)
-        smilesData = smilesData.splice(0, smilesData.length - 5)
+        if (smilesData.length > 5) {
+            smilesData = smilesData.splice(0, smilesData.length - 5)
+        }
         let dates = [1,2,3,4,5]
+        console.log(healthData)
         paint(dates,healthData, "healthChart")
         paint(dates,sportData, "sportChart")
         paint(dates,smilesData,"smilesChart")

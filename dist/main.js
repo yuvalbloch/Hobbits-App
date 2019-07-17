@@ -1,4 +1,4 @@
-let username = "Dani"
+let username = ""
 const HobManager = new hobManager()
 const Renderer = new renderer()
 let dailyQoute
@@ -22,6 +22,7 @@ $('#updateButton').one('click', function () {
     HobManager.compare(Renderer.randetBest ,username)
 
 })
+
 HobManager.compare(Renderer.randetBest ,username)
 function greet(user) {
     $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
@@ -50,11 +51,9 @@ statuses = statuses[0].status.filter(s=>s.date/86400000+0.5 > today)
 console.log(statuses[0])
 if(statuses[0]) {
     Renderer.renderData(statuses[0])
-
     // $('#info').hide()
-
-
 }}
+
 $("body").on("click", "#showChart", function(){
     HobManager.getCharts(username)
 })

@@ -3,6 +3,7 @@ const router = express.Router()
 const request = require('request')
 const user = require('../models/hobbits')
 
+
 router.get('/users', function (req, res) {
     user.find({}).exec(function (err, users) {
         res.send(users)
@@ -35,6 +36,13 @@ router.delete('/user/:userName', function (req, res) {
         res.send('deleted!')
     })
 })
+// sending request to an external api
+router.get('/qoute',function(req,res){
+    request.get('http://quotes.rest/qod.json', function(err, res2){
+    res.send(res2)  
+  })
+})
+
 
 
 

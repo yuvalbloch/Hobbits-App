@@ -13,6 +13,7 @@
 <body>
     <div class="head">
         <div id="welcomeUser"></div>
+        <div id="qoutes"></div>
         <h1 id="title">Hobbits</h1>
         <h2 id="slogen">make your habits, a hobby</h2>
         <div id="info">
@@ -26,9 +27,9 @@
 
     <div id="userContainer">
         <div id="userDay"></div>
-        <div id="best hobbits of the day!"></div>
+        <div id="best"></div>
     </div>
-
+   
     <script id="hobbies-template" type="text/x-handlebars-template">
         <div class="Hobbit">
         <h1>Hobbit name: {{userName}}</h1>
@@ -36,6 +37,25 @@
         <p>today's sports activites:{{sport}}</p>
         <p>today's smiles: {{smiles}}</p>  
     </div>
+    </script>
+    <script id="bests-template" type="text/x-handlebars-template">
+        <div>
+            <ol>best in helathi food
+                {{#each bestsInFood}}
+            <li>{{this.userName}}</li>
+                {{/each}}
+                </ol>
+            <ol>best in sport
+                {{#each bestsInSport}}
+                <li>{{this.userName}}</li>
+                {{/each}}
+            </ol>
+            <ol>the most smily hobit today
+                {{#each bestsInSmile}}
+                <li>{{this.userName}}</li>
+                {{/each}}
+            </ol>
+        </div>
     </script>
 
 

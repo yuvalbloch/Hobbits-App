@@ -1,13 +1,19 @@
-class renderer{
-    constructor(){
+class renderer {
+    constructor() {
 
     }
-    renderData(todayData){
-        $("#hobbits").empty()
-        console.log(todayData)
-        const source   = $("#hobbies-template").html()
+    renderData(todayData) {
+        const source = $("#hobbies-template").html()
         const template = Handlebars.compile(source);
         let someHTML = template(todayData)
-        $("#hobbits").append(someHTML)
+        $("#userDay").append(someHTML)
+    }
+    randetBest(data)
+    {
+        $("#best").empty()
+        const source = $("#bests-template").html()
+        const template = Handlebars.compile(source)
+        let someHTML = template(data)
+        $("#best").append(someHTML)
     }
  } 

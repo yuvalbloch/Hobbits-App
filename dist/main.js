@@ -1,9 +1,10 @@
-let username = "Dani"
+let username = "nata"
 const HobManager = new hobManager()
 const Renderer = new renderer
+
 greet(username)
 
-$('#updateButton').on('click', function(){
+$('#updateButton').one('click', function () {
     let water = $(this).siblings('#insertWater').val()
     let vegetables = $(this).siblings('#insertVeg').val()
     let floors = $(this).siblings('#insertFood').val()
@@ -14,13 +15,13 @@ $('#updateButton').on('click', function(){
         floors: floors,
         smiles: smiles
     }
-    console.log(newData)
-    HobManager.saveData(newData,username)
+    HobManager.saveData(newData, username)
     Renderer.renderData(HobManager.user)
-})
-HobManager.compare()
+    HobManager.compare(Renderer.randetBest ,username)
 
-function greet(user){
-    $("#welcomeUser").append(`<p>Welcome back: ${user}</p>`)
+})
+HobManager.compare(Renderer.randetBest ,username)
+function greet(user) {
+    $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }
 

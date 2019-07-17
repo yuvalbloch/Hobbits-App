@@ -1,4 +1,4 @@
-class hobManager{
+class hobManager {
     constructor() {
         this.user = {}
     }
@@ -7,7 +7,7 @@ class hobManager{
         const status = {
             userName: userName,
             date: new Date().getTime(),
-            healtyFood: data.vegetables + data.water,
+            healtyFood: parseInt(data.vegetables) + parseInt(data.water),
             sport: data.floors,
             smiles: data.smiles,
         }
@@ -15,23 +15,25 @@ class hobManager{
         this.user = status
         $.ajax({
             type: "PUT",
-            url:  `/updateuser/${userName}`,
+            url: `/updateuser/${userName}`,
             data: status,
             success: function () {
-                console.log("sucses")
+                console.log("success")
             },
         });
 
     }
-    async compare () {
+    async compare (callback, userName) {
         const now = new Date().getTime()/86400000
-        console.log("in")
         const users = await $.get("/users")
-        let sort = users.map(u => {return u.status})
+        const company = users.find(u => u.userName == userName).company
+        let sort = users.filter( u => u.company = company)
+        sort = sort.map(u => {return u.status})
         sort = sort.filter(u => u[0])
         sort = sort.map(u => u.filter(u =>u.date))
         sort = sort.map(u => u.filter(u=>u.date/86400000 +1 > now))
         sort = sort.map(u => {return u[u.length-1]})
+
         let bestsInFood = sort.sort(function (a, b) {
             return b.healtyFood - a.healtyFood;
         }).slice(0,3).filter(m => m.userName);
@@ -39,12 +41,12 @@ class hobManager{
             return b.sport - a.sport;
         }).slice(0,3).filter(m => m.userName);
         let bestsInSmile = sort.sort(function (a, b) {
-            return b.smile - a.smile;
+            return b.smiles - a.smiles;
         }).slice(0,3).filter(m => m.userName);
-        bestsInSport =bestsInSport.map(m => {return m.userName})
-        bestsInFood = bestsInFood.map(m => {return m.userName})
-        bestsInSmile =bestsInSmile.map(m => {return m.userName})
+        bestsInSport =bestsInSport.map(m => {return {userName :m.userName}})
+        bestsInFood = bestsInFood.map(m => {return {userName :m.userName}})
+        bestsInSmile =bestsInSmile.map(m => {return {userName :m.userName}})
         const bests = { bestsInSmile : bestsInSmile , bestsInSport : bestsInSport ,bestsInFood : bestsInFood}
-     console.log(bests)
+        callback(bests)
     }
 }

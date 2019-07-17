@@ -34,7 +34,6 @@ function greet(user) {
 //     $("#qoutes").append(`<p>${dailyQoute}</p>`)
 // })
 
-
 async function loadPage(){
 let today = new Date().getTime()/86400000
 const users = await $.get('/users')
@@ -43,8 +42,9 @@ statuses = statuses[0].status.filter(s=>s.date/86400000+0.5 > today)
 console.log(statuses[0])
 if(statuses[0]) {
     Renderer.renderData(statuses[0])
+
     // $('#info').hide()
-}
+
 }
 $("#showChart").on("click", "body", function(){
     getChart(username)

@@ -28,8 +28,17 @@
         <div id="userDay"></div>
         <div id="best"></div>
     </div>
-    <canvas id="myChart" width="100px" height="100px"><p></p></canvas>
-   
+    <div id = charts>
+        <div>
+        <canvas id="healthChart" class = "chart"></canvas>
+    </div>
+        <div>
+        <canvas id="sportChart"class = "chart" ></canvas>
+        </div>
+        <div>
+        <canvas id="smilesChart" class = "chart" ></canvas>
+        </div>
+    </div>
     <script id="hobbies-template" type="text/x-handlebars-template">
         <div class="Hobbit">
         <h1>Hobbit's name: {{userName}}</h1>

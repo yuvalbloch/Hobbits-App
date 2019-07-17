@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Hobbits App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -20,39 +22,52 @@
         <input type="text place" placeholder="Write you Company's name" id = "newComp"><button id = "update">Send!</button>
     </div>
     <div id="signIn">
-        <input type="text" placeholder="Whats your user name?">
-        <input type="password" placeholder="write your a password">
-        <button>Send!</button>
+        <input type="text" placeholder="Whats your user name?" id="exsistUser">
+        <input type="password" placeholder="write your a password" id= "exsistPass">
+        <button id="signInButton">Send!</button>
     </div>
 </div>
     <div class="head">
-        <div id="welcomeUser"></div>
-        <div id="qoutes"></div>
-        <h1 id="title">Hobbits</h1>
-        <h2 id="slogen">make your habits, a hobby</h2>
-        <div id="info">
-            <input id="insertWater" type="number" placeholder="how many glasses of water did you have today?">
-            <input id="insertVeg" type="number" placeholder="how many vegetables did you ate tday?">
-            <input id="insertFood" type="number" placeholder="how many sports activites did you have today?">
-            <input id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
-            <button  id="updateButton">Send!</button>
+
+        <div class="right">
+            <div id="welcomeUser"></div>
+            <div id="qoutes"></div>
+            <h1 id="title">Hobbits</h1>
+            <h2 id="slogen">make your habits, a hobby!</h2>
+            <div id="info">
+                <input id="insertWater" type="number" placeholder="how many glasses of water did you have today?">
+                <input id="insertVeg" type="number" placeholder="how many vegetables did you ate tday?">
+                <input id="insertFood" type="number" placeholder="how many sports activites did you have today?">
+                <input id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
+                <i class="fas fa-paper-plane" id="updateButton"></i>
+
+            </div>
+            <div id="nicethingsSection">
+            </div>
         </div>
-        <div id="nicethingsSection">
+        <div class="left">
+            <img src="http://up419.siz.co.il/up3/hdzwwbjykrzt.jpg" class="avatar">
         </div>
     </div>
+
+
+
+
+
+
     <div id="userContainer">
         <div id="userDay"></div>
         <div id="best"></div>
     </div>
-    <div id = charts>
+    <div id=charts>
         <div>
-        <canvas id="healthChart" class = "chart"></canvas>
-    </div>
-        <div>
-        <canvas id="sportChart"class = "chart" ></canvas>
+            <canvas id="healthChart" class="chart"></canvas>
         </div>
         <div>
-        <canvas id="smilesChart" class = "chart" ></canvas>
+            <canvas id="sportChart" class="chart"></canvas>
+        </div>
+        <div>
+            <canvas id="smilesChart" class="chart"></canvas>
         </div>
     </div>
     <script id="hobbies-template" type="text/x-handlebars-template">
@@ -61,8 +76,8 @@
         <p>today's healthy food:{{healtyFood}}</p>
         <p>today's sports activities:{{sport}}</p>
         <p>today's smiles: {{smiles}}</p>
-        <button id="showChart">show chart!</button>
 
+        <i class="fas fa-chart-bar" id="showChart"></i>
     </div>
     </script>
     <script id="bests-template" type="text/x-handlebars-template">
@@ -90,7 +105,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-    <script src ="randerChatres.js"></script>
+    <script src="randerChatres.js"></script>
     <script src="renderer.js"></script>
     <script src="hobManager.js"></script>
     <script src="main.js"></script>

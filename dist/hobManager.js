@@ -79,4 +79,17 @@ class hobManager {
         }
         $.post("/user" , obj )
     }
+    async exsistUsers(name, password){
+       const users = await $.get('/users')
+       const user = users.find( u => u.userName == name)
+       if(user){
+           if(user.password == password){
+            username =name 
+            $("#sign").hide()
+            greet(username)
+            loadPage(username)
+            peaceandlove()
+           }
+       }
+    }
 }

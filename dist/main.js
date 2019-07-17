@@ -54,7 +54,7 @@ console.log(statuses[0])
 if(statuses[0]) {
     Renderer.renderData(statuses[0])
 
-    $('#info').hide()
+    // $('#info').hide()
 
 
 }}

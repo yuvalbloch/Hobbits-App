@@ -1,6 +1,7 @@
 let username = "Dani"
 const HobManager = new hobManager()
 const Renderer = new renderer
+let dailyQoute
 
 greet(username)
 
@@ -24,4 +25,12 @@ HobManager.compare()
 function greet(user) {
     $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }
+
+
+$.get('/qoute', function(res){
+    const qoute = JSON.parse(res.body).contents.quotes[0].quote
+    dailyQoute = qoute
+    console.log(qoute)
+    console.log(dailyQoute)
+})
 

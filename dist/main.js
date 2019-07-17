@@ -25,7 +25,6 @@ $('#updateButton').one('click', function () {
 
 })
 
-HobManager.compare(Renderer.randetBest ,username)
 function greet(user) {
     $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }
@@ -39,13 +38,14 @@ $("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
 
 
 
-// $.get('/qoute', function(res){
-//     const qoute = JSON.parse(res.body).contents.quotes[0].quote
-//     dailyQoute = qoute
-//     $("#qoutes").append(`<p>${dailyQoute}</p>`)
-// })
+$.get('/qoute', function(res){
+    const qoute = JSON.parse(res.body).contents.quotes[0].quote
+    dailyQoute = qoute
+    $("#qoutes").append(`<p>${dailyQoute}</p>`)
+})
 
 async function loadPage(){
+    HobManager.compare(Renderer.randetBest ,username)
 let today = new Date().getTime()/86400000
 const users = await $.get('/users')
 let statuses = users.filter(u=> u.userName == username)

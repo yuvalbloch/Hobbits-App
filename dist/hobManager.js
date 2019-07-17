@@ -50,15 +50,14 @@ class hobManager {
         callback(bests)
     }
 
-    async getCharts(username) {
+    async getCharts(username ,ida) {
+        const id =ida  || ["healthChart","sportChart","smilesChart"]
         let data = await $.get('/users')
         let userObject = data.filter(u => u.userName == username)
-        console.log(userObject)
         let healthData = userObject[0].status.map(s => s.healtyFood)
         if (healthData.length >5) {
             healthData = healthData.splice(0, (healthData.length - 5))
         }
-        console.log(userObject)
         let sportData = userObject[0].status.map(s => s.sport)
         if (sportData.length > 5) {
             sportData = sportData.splice(0, sportData.length - 5)
@@ -68,10 +67,9 @@ class hobManager {
             smilesData = smilesData.splice(0, smilesData.length - 5)
         }
         let dates = [1,2,3,4,5]
-        console.log(healthData)
-        paint(dates,healthData, "healthChart")
-        paint(dates,sportData, "sportChart")
-        paint(dates,smilesData,"smilesChart")
+        paint(dates,healthData, id[0] )
+        paint(dates,sportData, id[1] )
+        paint(dates,smilesData,id[2] )
     }
     createUser(name , password ,company)
     {
@@ -94,7 +92,29 @@ class hobManager {
             greet(username)
             loadPage(username)
             peaceandlove()
+               if ( user.isManager)
+               {
+                   $("#userContainer").append("<button id = 'allCharts'>charts of evrybody</button>")
+               }
            }
        }
+    }
+    async showAll()
+    {
+        console.log("in")
+        let data = await $.get('/users')
+        data = data.map(m => m.userName)
+        console.log(data)
+        let i = 0
+        for (let d of data )
+        {
+            const obj = {health : "a" + i,sport : "b" +i ,smile :"c" +i ,userName :d}
+            const source = $("#showAll-template").html()
+            const template = Handlebars.compile(source)
+            let someHTML = template(obj)
+            $("#manger").append(someHTML)
+            this.getCharts(d, ["a" +i , "b" +i , "c" +i])
+            i++
+        }
     }
 }

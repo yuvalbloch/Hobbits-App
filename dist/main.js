@@ -43,6 +43,6 @@ statuses = statuses[0].status.filter(s=>s.date/86400000+0.5 > today)
 console.log(statuses[0])
 if(statuses[0]) {
     Renderer.renderData(statuses[0])
-//    $('#info').hide()
+   $('#info').hide()
 }
 }

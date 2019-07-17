@@ -1,4 +1,4 @@
-let username = "Dani"
+let username = "nata"
 const HobManager = new hobManager()
 const Renderer = new renderer()
 let dailyQoute

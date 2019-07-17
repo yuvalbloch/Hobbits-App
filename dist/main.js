@@ -45,7 +45,7 @@ if(statuses[0]) {
 
     // $('#info').hide()
 
-}
-$("#showChart").on("click", "body", function(){
-    getChart(username)
+}}
+$("body").on("click", "#showChart", function(){
+    HobManager.getCharts(username)
 })

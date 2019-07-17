@@ -51,17 +51,18 @@ class hobManager {
     }
 
     async getCharts(username) {
-        let data = await $get('/users')
+        let data = await $.get('/users')
         let userObject = data.filter(u => u.userName == username)
+        console.log(userObject)
+        let healthData = userObject[0].status.map(s => s.healtyFood)
+        console.log(healthData.length-5)
+        healthData = healthData.splice(0, (healthData.length - 5))
+        console.log(userObject)
+        let sportData = userObject[0].status.map(s => s.sport)
+        sportData = sportData.splice(0, sportData.length - 5)
 
-        healthData = userObject.status.map(s => s.healtyFood)
-        healthData = userObject.splice(0, healthData.length - 5)
-
-        sportData = userObject.status.map(s => s.sport)
-        sportData = userObject.splice(0, sportData.length - 5)
-
-        smilesData = userObject.status.map(s => s.smiles)
-        smilesData = userObject.splice(0, smilesData.length - 5)
+        let smilesData = userObject[0].status.map(s => s.smiles)
+        smilesData = smilesData.splice(0, smilesData.length - 5)
         let dates = [1,2,3,4,5]
         paint(dates,healthData, "healthChart")
         paint(dates,sportData, "sportChart")

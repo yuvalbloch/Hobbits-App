@@ -71,3 +71,6 @@ $("#signInButton").on("click" ,function () {
     const newpassWord = $("#exsistPass").val()
     HobManager.exsistUsers(newUserName,newpassWord)
 })
+$("body").on("click" ,"#allCharts" ,function () {
+    HobManager.showAll()
+})

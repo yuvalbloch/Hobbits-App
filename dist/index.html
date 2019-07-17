@@ -9,46 +9,46 @@
     <title>Hobbits App</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Karla&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Karla&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Josefin+Slab|Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Josefin+Slab|Karla&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Exo|Hind+Vadodara|Indie+Flower|Josefin+Slab|Karla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div id="sign">
-    <h1>Hobbits app</h1>
-    <h2> Welcome User</h2>
-    <div id="signUp">
-        <input type="text" placeholder="Choose a user name" id = "newUser">
-        <input type="password" placeholder="Choose a password" id = "newPass">
-        <input type="text place" placeholder="Write you Company's name" id = "newComp"><button id = "update">Send!</button>
+    <div id="sign">
+        <h1 class="w3-center w3-animate-bottom">Hobbits app</h1>
+        <h2> Welcome User</h2>
+        <div id="signUp">
+            <input type="text" placeholder="Choose a user name" id="newUser">
+            <input type="password" placeholder="Choose a password" id="newPass">
+            <input type="text place" placeholder="Write you Company's name" id="newComp"><button
+                id="update">Send!</button>
+        </div>
+        <div id="signIn">
+            <input type="text" placeholder="Whats your user name?" id="exsistUser">
+            <input type="password" placeholder="write your a password" id="exsistPass">
+            <button id="signInButton">Send!</button>
+        </div>
     </div>
-    <div id="signIn">
-        <input type="text" placeholder="Whats your user name?" id="exsistUser">
-        <input type="password" placeholder="write your a password" id= "exsistPass">
-        <button id="signInButton">Send!</button>
-    </div>
-</div>
     <div class="head">
 
         <div class="right">
             <div id="welcomeUser"></div>
-            <div id="qoutes"></div>
             <h1 id="title">Hobbits</h1>
             <h2 id="slogen">make your habits, a hobby!</h2>
             <div id="info">
-                <input id="insertWater" type="number" placeholder="how many glasses of water did you have today?">
-                <input id="insertVeg" type="number" placeholder="how many vegetables did you ate tday?">
-                <input id="insertFood" type="number" placeholder="how many sports activites did you have today?">
-                <input id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
+                <input class="infoInput" id="insertWater" type="number" placeholder="how many glasses of water did you drink today?">
+                <input class="infoInput" id="insertVeg" type="number" placeholder="how many vegetables did you eat today?">
+                <input class="infoInput" id="insertFood" type="number" placeholder="how many sports activites did you have today?">
+                <input class="infoInput" id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
                 <i class="fas fa-paper-plane" id="updateButton"></i>
-
-
-
             </div>
             <div id="nicethingsSection">
+                <div id="qoutes"></div>
             </div>
         </div>
         <div class="left">
@@ -85,26 +85,26 @@
     <script id="hobbies-template" type="text/x-handlebars-template">
         <div class="Hobbit">
         <h1>Hobbit's name: {{userName}}</h1>
-        <p>today's healthy food:{{healtyFood}}</p>
-        <p>today's sports activities:{{sport}}</p>
+        <p>today's healthy food: {{healtyFood}}</p>
+        <p>today's sports activities: {{sport}}</p>
         <p>today's smiles: {{smiles}}</p>
 
         <i class="fas fa-chart-bar" id="showChart"></i>
     </div>
     </script>
     <script id="bests-template" type="text/x-handlebars-template">
-        <div>
-            <div class="health">best in healthy food
+        <div class="bestDiv">
+            <div class="health"><h2>best in healthy food</h2>
                 {{#each bestsInFood}}
             <p>{{this.userName}}</p>
                 {{/each}}
             </div>
-            <div class="sport">best in sport
+            <div class="sport"><h2>best in sport</h2>
                 {{#each bestsInSport}}
                 <p>{{this.userName}}</p>
                 {{/each}}
             </div>
-            <div class="smile">the most smiling hobbit today
+            <div class="smile"><h2>the most smiling hobbit today</h2>
                 {{#each bestsInSmile}}
                 <p>{{this.userName}}</p>
                 {{/each}}

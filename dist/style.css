@@ -43,11 +43,11 @@ body {
     text-shadow: 8px 8px 8px black;
     font-family: 'Poppins';
     margin: 0;
-  text-shadow: 0 2px 0 #fe4902,
-               0 3px 0 #fe4902,
+  text-shadow: 0 3px 0 #fe4902,
                0 4px 0 #fe4902,
                0 5px 0 #fe4902,
                0 6px 0 #fe4902,
+               0 7px 0 #fe4902,
                0 6px 1px rgba(0,0,0,.1),
                0 0 5px rgba(0,0,0,.1),
                0 1px 3px rgba(0,0,0,.3),
@@ -62,7 +62,7 @@ body {
     font-weight: bold;
     /* font-size: 20px; */
     color: white;
-    font-family: 'Josefin Slab';
+    font-family: 'Hind Vadodara';
 }
 
 #qoutes{
@@ -70,14 +70,14 @@ body {
     font-weight: bold;
     /* font-size: 20px; */
     color: white;
-    font-family: 'Josefin Slab';
+    font-family: 'Hind Vadodarab';
 }
 #slogen{
     text-align: center;
     font-weight: bold;
     /* font-size: 20px; */
     color: white;
-    font-family: 'Josefin Slab';
+    font-family: 'Hind Vadodara';
     text-decoration: underline;
 }
 
@@ -86,17 +86,18 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 .Hobbit{
     -webkit-box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
     -moz-box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
     box-shadow: 1px 2px 34px 0px rgba(235,218,235,1);
-    font-family: 'Poppins';
 font-weight: bold;
 width: 600px;
 margin: 20px;
 background-color: #2ecc71;
 border-radius: 20%;
 color:#ffffff;
+font-family: 'Hind Vadodara';
 }
 
 #charts
@@ -104,7 +105,7 @@ color:#ffffff;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    font-family: 'Poppins';
+    font-family: 'Hind Vadodara';
 }
 
 #showChart{
@@ -125,7 +126,7 @@ padding:5px;
 
 #nicethingsSection{
     font-weight: bold;
-    font-family: 'Josefin Slab';
+    font-family: 'Hind Vadodara';
 }
 
 .avatar {
@@ -156,20 +157,58 @@ padding:5px;
 	top:1px;
 }
 
+.bestDiv{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    grid-gap: 10px;
+    font-family: 'Hind Vadodara';
+    
+}
+
 .health {
     background-color:#fe4902;
-    border-radius: 40%;
-    width: 200px;
+    height: 250px;
+    font-size: 15px;
+    border-radius: 20%;
+    margin-top: 60px;
 }
 
 .sport {
     background-color:#fe4902;
-    border-radius: 40%;
-    width: 200px;
+    height: 250px;
+    font-size: 15px;
+    border-radius: 20%;
+    margin-top: 60px;
 }
 
 .smile {
     background-color:#fe4902;
+    height: 250px;
+    font-size: 15px;
+    border-radius: 20%;
+    margin-top: 60px;
+}
+
+.chart {
+    color: black;
+    /* background-image: url('http://up419.siz.co.il/up3/wztnlmi4z1oc.jpg') */
+}
+
+.infoInput {
+    border: none;
+    text-decoration: none;
+height: 30px;
+    cursor: pointer;
+    font-family: 'Hind Vadodara';
+    width: 270px;
+    margin: 5px;
+    border-radius: 5%;
+ }
+
     border-radius: 40%;
     width: 200px;
 }

@@ -1,4 +1,4 @@
-let username = "Dani"
+let username = "nata"
 const HobManager = new hobManager()
 const Renderer = new renderer()
 
@@ -19,9 +19,10 @@ $('#updateButton').one('click', function () {
     }
     HobManager.saveData(newData, username)
     Renderer.renderData(HobManager.user)
-})
-HobManager.compare()
+    HobManager.compare(Renderer.randetBest ,username)
 
+})
+HobManager.compare(Renderer.randetBest ,username)
 function greet(user) {
     $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }

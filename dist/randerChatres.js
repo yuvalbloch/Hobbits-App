@@ -28,6 +28,7 @@ const paint= function (dates , numbers,canvas) {
         },
         options: {
             scales: {
+                gridLines : {lineWidth : 5},
                 yAxes: [{
 
                     ticks: {

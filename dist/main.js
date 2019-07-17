@@ -2,9 +2,12 @@ let username = "Dani"
 const HobManager = new hobManager()
 const Renderer = new renderer()
 let dailyQoute
+const tasks = ["Say good morning to: ", "give a nice compliment to: ", "ask about the day of: ", "what do you think about launch with: ", "did you already spoken to: "]
+
 
 greet(username)
 loadPage(username)
+peaceandlove()
 
 $('#updateButton').one('click', function () {
     let water = $(this).siblings('#insertWater').val()
@@ -26,6 +29,14 @@ HobManager.compare(Renderer.randetBest ,username)
 function greet(user) {
     $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }
+  async function peaceandlove(){
+    let bringUser = await $.get('/users')
+    bringUser = bringUser.map(u=>u.userName)
+    let indexU = Math.floor((Math.random() * bringUser.length))
+    let indexT = Math.floor((Math.random() * 5))
+$("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
+}
+
 
 
 // $.get('/qoute', function(res){
@@ -48,4 +59,4 @@ if(statuses[0]) {
 }
 $("#showChart").on("click", "body", function(){
     getChart(username)
-})
+})}

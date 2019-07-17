@@ -38,11 +38,11 @@ $("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
 
 
 
-// $.get('/qoute', function(res){
-//     const qoute = JSON.parse(res.body).contents.quotes[0].quote
-//     dailyQoute = qoute
-//     $("#qoutes").append(`<p>${dailyQoute}</p>`)
-// })
+$.get('/qoute', function(res){
+    const qoute = JSON.parse(res.body).contents.quotes[0].quote
+    dailyQoute = qoute
+    $("#qoutes").append(`<p>${dailyQoute}</p>`)
+})
 
 async function loadPage(){
     HobManager.compare(Renderer.randetBest ,username)

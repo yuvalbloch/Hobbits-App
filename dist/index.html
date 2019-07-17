@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Karla&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Karla&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Josefin+Slab|Karla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
@@ -91,21 +94,21 @@
     </script>
     <script id="bests-template" type="text/x-handlebars-template">
         <div>
-            <ol class="health">best in healthy food
+            <div class="health">best in healthy food
                 {{#each bestsInFood}}
-            <li>{{this.userName}}</li>
+            <p>{{this.userName}}</p>
                 {{/each}}
-                </ol>
-            <ol class="sport">best in sport
+            </div>
+            <div class="sport">best in sport
                 {{#each bestsInSport}}
-                <li>{{this.userName}}</li>
+                <p>{{this.userName}}</p>
                 {{/each}}
-            </ol>
-            <ol class="smile">the most smiling hobbit today
+            </div>
+            <div class="smile">the most smiling hobbit today
                 {{#each bestsInSmile}}
-                <li>{{this.userName}}</li>
+                <p>{{this.userName}}</p>
                 {{/each}}
-            </ol>
+            </div>
         </div>
     </script>
 <script id="showAll-template" type="text/x-handlebars-template">
@@ -129,7 +132,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-    <script src="randerChatres.js"></script>
+    <script src="randerCharts.js"></script>
     <script src="renderer.js"></script>
     <script src="hobManager.js"></script>
     <script src="main.js"></script>

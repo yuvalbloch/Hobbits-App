@@ -37,12 +37,11 @@ router.delete('/user/:userName', function (req, res) {
     })
 })
 
-// sending request to an external api
-// router.get('/qoute',function(req,res){
-//     request.get('http://quotes.rest/qod.json', function(err, res2){
-//     res.send(res2)  
-//   })
-// })
+router.get('/qoute',function(req,res){
+    request.get('http://quotes.rest/qod.json', function(err, res2){
+    res.send(res2)  
+  })
+})
 
 
 

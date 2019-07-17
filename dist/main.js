@@ -1,7 +1,7 @@
 let username = "Dani"
 const HobManager = new hobManager()
 const Renderer = new renderer()
-let dailyQoute
+// let dailyQoute
 
 greet(username)
 loadPage(username)
@@ -28,11 +28,11 @@ function greet(user) {
 }
 
 
-$.get('/qoute', function(res){
-    const qoute = JSON.parse(res.body).contents.quotes[0].quote
-    dailyQoute = qoute
-    $("#qoutes").append(`<p>${dailyQoute}</p>`)
-})
+// $.get('/qoute', function(res){
+//     const qoute = JSON.parse(res.body).contents.quotes[0].quote
+//     dailyQoute = qoute
+//     $("#qoutes").append(`<p>${dailyQoute}</p>`)
+// })
 
 
 async function loadPage(){

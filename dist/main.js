@@ -54,10 +54,16 @@ console.log(statuses[0])
 if(statuses[0]) {
     Renderer.renderData(statuses[0])
 
-    $('#info').hide()
+    // $('#info').hide()
 
 
 }}
 $("body").on("click", "#showChart", function(){
     HobManager.getCharts(username)
+})
+$("#update").on("click" ,function () {
+    const newUserName = $("#newUser").val()
+    const newpassWord = $("#newPass").val()
+    const newcompany= $("#newComp").val()
+    HobManager.createUser(newUserName,newpassWord,newcompany)
 })

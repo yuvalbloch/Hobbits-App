@@ -68,4 +68,15 @@ class hobManager {
         paint(dates,sportData, "sportChart")
         paint(dates,smilesData,"smilesChart")
     }
+    createUser(name , password ,company)
+    {
+        const obj = {
+            isManager : true,
+            company: company,
+            userName: name,
+            password:  password,
+
+        }
+        $.post("/user" , obj )
+    }
 }

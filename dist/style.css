@@ -7,7 +7,19 @@ body {
     padding: 0;
     margin: 0;
   }
+#sign{
+    position: absolute;
+    width: 100vw;
+    height: 300vh;
+    background: #4f46cc;
 
+}
+#signIn{
+     position: relative;
+ }
+#signUp{
+    position: relative;
+}
 .head {
     padding: 0;
     display: grid;

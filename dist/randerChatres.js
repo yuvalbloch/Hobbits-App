@@ -1,5 +1,5 @@
-const paint= function (dates , numbers) {
-    var ctx = document.getElementById('myChart').getContext('2d');
+const paint= function (dates , numbers,canvas) {
+    var ctx = document.getElementById(canvas).getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {

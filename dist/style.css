@@ -59,3 +59,10 @@ font-weight: bold;
 width: 600px;
 margin: 20px;
 }
+#charts
+{
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+

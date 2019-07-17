@@ -45,6 +45,5 @@ class hobManager {
         bestsInFood = bestsInFood.map(m => {return m.userName})
         bestsInSmile =bestsInSmile.map(m => {return m.userName})
         const bests = { bestsInSmile : bestsInSmile , bestsInSport : bestsInSport ,bestsInFood : bestsInFood}
-     console.log(bests)
     }
 }

@@ -31,7 +31,7 @@ class hobManager {
         sort = sort.filter(u => u[0])
         sort = sort.map(u => u.filter(u =>u.date))
         sort = sort.map(u => u.filter(u=>u.date/86400000 +1 > now))
-        sort = sort.map(u => {return u[0]})
+        sort = sort.map(u => {return u[u.length]})
         let bestsInFood = sort.sort(function (a, b) {
             return b.healtyFood - a.healtyFood;
         }).slice(0,3);
@@ -46,5 +46,6 @@ class hobManager {
         bestsInSmile =bestsInSmile.map(m => {return m.userName})
         const bests = { bestsInSmile : bestsInSmile , bestsInSport : bestsInSport ,bestsInFood : bestsInFood}
      console.log(bests)
+        return bests
     }
 }

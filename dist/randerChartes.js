@@ -1,4 +1,5 @@
 const paint= function (dates , numbers,canvas) {
+    console.log(numbers)
     var ctx = document.getElementById(canvas).getContext('2d');
     var myChart = new Chart(ctx, {
         animationEnabled: true,

@@ -1,6 +1,7 @@
 const paint= function (dates , numbers,canvas) {
     var ctx = document.getElementById(canvas).getContext('2d');
     var myChart = new Chart(ctx, {
+        animationEnabled: true,
         type: 'bar',
         data: {
             labels: dates,
@@ -28,13 +29,15 @@ const paint= function (dates , numbers,canvas) {
         },
         options: {
             scales: {
-                gridLines : {lineWidth : 5},
+                gridLines : {color : "rgba(0, 0, 0, 1)"},
                 yAxes: [{
 
                     ticks: {
                         fontColor: "black",
                         fontSize : 17,
-                        beginAtZero: true
+                        beginAtZero: true,
+                        lineHeight : 1.5,
+                        major :{}
                     }
                 }]
             }

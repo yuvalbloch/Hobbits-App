@@ -13,7 +13,6 @@ body {
     display: grid;
     grid-template-rows: repeat(1,4fr);
     margin-bottom: 20px;
-    background-image: url("https://i.pinimg.com/564x/6f/b6/f1/6fb6f1643e17f3463ecd104f8109b443.jpg");
     background-size:100vw 50vh ;
 }
 

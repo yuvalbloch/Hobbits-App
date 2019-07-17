@@ -164,3 +164,8 @@ color:white;
     border-radius: 40%;
     width: 200px;
 }
+.mangerGraph
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

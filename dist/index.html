@@ -64,15 +64,21 @@
     </div>
     <div id=charts>
         <div>
+            <p> health</p>
             <canvas id="healthChart" class="chart"></canvas>
         </div>
         <div>
+            <p> sport</p>
             <canvas id="sportChart" class="chart"></canvas>
         </div>
         <div>
+            <p> smile</p>
             <canvas id="smilesChart" class="chart"></canvas>
         </div>
     </div>
+<div id ="manger">
+
+</div>
     <script id="hobbies-template" type="text/x-handlebars-template">
         <div class="Hobbit">
         <h1>Hobbit's name: {{userName}}</h1>
@@ -102,7 +108,22 @@
             </ol>
         </div>
     </script>
-
+<script id="showAll-template" type="text/x-handlebars-template">
+    <h2>{{userName}}</h2>
+    <div class = "mangerGraph">
+        <div>
+            <p> health</p>
+        <canvas id="{{health}}" class="chart"></canvas>
+    </div>
+        <div>
+            <p> sport</p>
+            <canvas id="{{sport}}" class="chart"></canvas>
+        </div>
+        <div>
+            <p> smile</p>
+            <canvas id="{{smile}}" class="chart"></canvas>
+        </div></div>
+</script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"

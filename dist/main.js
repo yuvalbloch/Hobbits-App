@@ -25,7 +25,6 @@ $('#updateButton').one('click', function () {
 
 })
 
-HobManager.compare(Renderer.randetBest ,username)
 function greet(user) {
     $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
 }
@@ -46,6 +45,7 @@ $("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
 // })
 
 async function loadPage(){
+    HobManager.compare(Renderer.randetBest ,username)
 let today = new Date().getTime()/86400000
 const users = await $.get('/users')
 let statuses = users.filter(u=> u.userName == username)
@@ -70,4 +70,7 @@ $("#signInButton").on("click" ,function () {
     const newUserName = $("#exsistUser").val()
     const newpassWord = $("#exsistPass").val()
     HobManager.exsistUsers(newUserName,newpassWord)
+})
+$("body").on("click" ,"#allCharts" ,function () {
+    HobManager.showAll()
 })

@@ -5,7 +5,7 @@ const paint= function (dates , numbers,canvas) {
         data: {
             labels: dates,
             datasets: [{
-                label: '# of Votes',
+                label: '# of healthy lifestyle',
                 data: numbers,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',

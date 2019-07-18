@@ -50,7 +50,7 @@ class hobManager {
         callback(bests)
     }
 
-    async getCharts(username ,ida) {
+    async getCharts(username ,ida ) {
         const id =ida  || ["healthChart","sportChart","smilesChart"]
         let data = await $.get('/users')
         let userObject = data.filter(u => u.userName == username)
@@ -67,9 +67,9 @@ class hobManager {
             smilesData = smilesData.splice(0, smilesData.length - 5)
         }
         let dates = [1,2,3,4,5]
-        paint(dates,healthData, id[0] )
-        paint(dates,sportData, id[1] )
-        paint(dates,smilesData,id[2] )
+        paint(dates,healthData, id[0] ,"helath")
+        paint(dates,sportData, id[1] ,"sport")
+        paint(dates,smilesData,id[2] ,"smile")
     }
     createUser(name , password ,company)
     {

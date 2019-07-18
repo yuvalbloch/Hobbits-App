@@ -35,7 +35,7 @@ function greet(user) {
     let indexT = Math.floor((Math.random() * 5))
       if(bringUser[indexU] == username)
       {
-          indexU++
+          indexU =0;
       }
 $("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
 }
@@ -68,6 +68,7 @@ $("#update").on("click" ,function () {
     const newpassWord = $("#newPass").val()
     const newcompany= $("#newComp").val()
     HobManager.createUser(newUserName,newpassWord,newcompany)
+    alert("sigh up sucsess")
 })
 
 $("#signInButton").on("click" ,function () {

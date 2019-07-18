@@ -46,10 +46,10 @@
             <h1 id="title">Hobbits</h1>
             <h2 id="slogen">make your habits, a hobby!</h2>
             <div id="info">
-                <input class="infoInput" id="insertWater" type="number" placeholder="how many glasses of water did you drink today?">
-                <input class="infoInput" id="insertVeg" type="number" placeholder="how many vegetables did you eat today?">
-                <input class="infoInput" id="insertFood" type="number" placeholder="how many sports activites did you have today?">
-                <input class="infoInput" id="insertSmiles" type="number" placeholder="how many smiles did you give today?">
+                <input class="infoInput" id="insertWater" type="number" placeholder="Number of glasses:">
+                <input class="infoInput" id="insertVeg" type="number" placeholder="Number of vegetables:">
+                <input class="infoInput" id="insertFood" type="number" placeholder="Number of sports activites:">
+                <input class="infoInput" id="insertSmiles" type="number" placeholder="Number of smiles:">
                 <i class="fas fa-paper-plane" id="updateButton"></i>
             </div>
             <div id="nicethingsSection">
@@ -87,9 +87,9 @@
     <script id="hobbies-template" type="text/x-handlebars-template">
         <div class="Hobbit">
         <h1>Hobbit's name: {{userName}}</h1>
-        <p>today's healthy food: {{healtyFood}}</p>
-        <p>today's sports activities: {{sport}}</p>
-        <p>today's smiles: {{smiles}}</p>
+        <p>Today's healthy food: {{healtyFood}}</p>
+        <p>Today's sports activities: {{sport}}</p>
+        <p>Today's smiles: {{smiles}}</p>
 
         <i class="fas fa-chart-bar" id="showChart"></i>
     </div>

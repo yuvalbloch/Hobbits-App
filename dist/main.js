@@ -8,7 +8,7 @@ const tasks = ["Say good morning to: ", "give a nice compliment to: ", "ask abou
 
 
 
-$('#updateButton').on('click', function () {
+$('#updateButton').one('click', function () {
     let water = $(this).siblings('#insertWater').val()
     let vegetables = $(this).siblings('#insertVeg').val()
     let floors = $(this).siblings('#insertFood').val()
@@ -57,7 +57,7 @@ statuses = statuses[0].status.filter(s=>s.date/86400000+0.5 > today)
 console.log(statuses[0])
 if(statuses[0]) {
     Renderer.renderData(statuses[0])
-    // $('#info').hide()
+    $('#info').hide()
 }}
 
 $("body").on("click", "#showChart", function(){

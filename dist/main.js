@@ -3,7 +3,7 @@ let username = ""
 
 const HobManager = new hobManager()
 const Renderer = new renderer()
-let dailyQoute
+let dailyQuote
 const tasks = ["Say good morning to: ", "give a nice compliment to: ", "ask about the day of: ", "what do you think about launch with: ", "did you already spoken to: "]
 
 
@@ -42,11 +42,11 @@ $("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
 
 
 
-// $.get('/qoute', function(res){
-//     const qoute = JSON.parse(res.body).contents.quotes[0].quote
-//     dailyQoute = qoute
-//     $("#qoutes").append(`<p>${dailyQoute}</p>`)
-// })
+$.get('/quote', function(res){
+    const quote = JSON.parse(res.body).contents.quotes[0].quote
+    dailyQuote = quote
+    $("#quotes").append(`<p>${dailyQuote}</p>`)
+})
 
 async function loadPage(){
     HobManager.compare(Renderer.randetBest ,username)

@@ -137,7 +137,7 @@ body {
     font-family: 'Hind Vadodara';
 }
 
-#qoutes{
+#quotes{
     text-align: center;
     font-weight: bold;
     /* font-size: 20px; */
@@ -281,12 +281,14 @@ height: 30px;
     border-radius: 5%;
  }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 5e68fab8be121acf81001403935d86765822e6d3
 .mangerGraph
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sport, .smiles , .health {
+    align-content: center;
+    justify-content: center;
+    
 }

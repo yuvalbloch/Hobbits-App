@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/', api);
 app.use(express.static(path.join(__dirname, 'dist')))
 app.use(express.static(path.join(__dirname, 'node_modules')))
-mongoose.connect('mongodb://localhost/HobbitsDB', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/HobbitsDB', { useNewUrlParser: true })
 
 const port = 3000
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
     console.log("server started on port: " + port)
 })

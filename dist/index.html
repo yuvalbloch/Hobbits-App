@@ -5,34 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Hobbits App</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Karla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Karla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo|Indie+Flower|Josefin+Slab|Karla&display=swap"
         rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Exo|Hind+Vadodara|Indie+Flower|Josefin+Slab|Karla&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hanalei&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+
     <div id="sign">
-        <h1 class="w3-center w3-animate-bottom">Hobbits app</h1>
-        <h2> Welcome User</h2>
-        <div id="signUp">
-            <input type="text" placeholder="Choose a user name" id="newUser">
-            <input type="password" placeholder="Choose a password" id="newPass">
-            <input type="text place" placeholder="Write you Company's name" id="newComp"><button
-                id="update">Send!</button>
+
+        <h1 class="headline">Hobbits app</h1><img id = "bilbo" src="https://vignette.wikia.nocookie.net/edain-mod/images/3/3d/Bilbo.jpg/revision/latest?cb=20160423010958">
+        <h2 id="welcome"> Welcome dear Hobbit!</h2>
+        <div id="containerInfo">
+        <div id="signUp"><p class="tit">Become a Hobbit!</p>
+            <input type="text" placeholder="Choose USER NAME" id="newUser" class="signInput">
+            <input type="password" placeholder="Choose MAGIC PASSWORD" id="newPass" class="signInput">
+            <input type="text place" placeholder="Write your COMPANY NAME" id="newComp" class="signInput"><button
+                id="update" class="update">Sign up!</button>
         </div>
-        <div id="signIn">
-            <input type="text" placeholder="Whats your user name?" id="exsistUser">
-            <input type="password" placeholder="write your a password" id="exsistPass">
-            <button id="signInButton">Send!</button>
+        <div id="signIn"><p class="tit">Already Hobbit!</p>
+            <input type="text" placeholder="Hobbit's USER NAME" id="exsistUser" class="signInput">
+            <input type="password" placeholder="Hobbit's MAGIC PASSWORD" id="exsistPass" class="signInput">
+            <button id="signInButton" class="update">Login!</button>
         </div>
+    </div>
     </div>
     <div class="head">
 
@@ -132,7 +137,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-    <script src="randerCharts.js"></script>
+    <script src="randerChartes.js"></script>
     <script src="renderer.js"></script>
     <script src="hobManager.js"></script>
     <script src="main.js"></script>

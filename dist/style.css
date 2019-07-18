@@ -5,18 +5,90 @@ body {
     padding: 0;
     margin: 0;
   }
+  #containerInfo{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+  }
 #sign{
     position: absolute;
     width: 100vw;
     height: 300vh;
-    background: #4f46cc;
-
+    /* background-image: url('http://i.imgur.com/sbGcBJs.jpg'); */
+    background-color: blanchedalmond
+    /* background-size: 100%; */
 }
+.headline {
+    font-family: 'Cinzel', serif;
+    font-size: 90px;
+    margin: 3px;
+}
+#welcome{
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    margin: 10px;
+ 
+ 
+}
+#bilbo{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    right: 120px;
+    border-radius: 50px;
+    border: 2px ridge goldenrod;
+    top : 20px;
+    border-width: 5px;
+    -webkit-box-shadow: 3px -2px 40px 20px rgba(222,140,17,1);
+    -moz-box-shadow: 3px -2px 40px 20px rgba(222,140,17,1);
+    box-shadow: 3px -2px 40px 20px rgba(222,140,17,1);
+}
+.signInput{
+    border-radius: 40%;
+    height: 45px;
+    text-align: center;
+    border: 2px solid black; 
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(241,180,36);
+    background: linear-gradient(90deg, rgba(241,180,36,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%);
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
 #signIn{
      position: relative;
+     display: grid;
+     grid-template-rows: repeat(5, 1fr);
+     grid-gap: 3px;
+     width: 30vw;
  }
 #signUp{
     position: relative;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+    width: 30vw;
+}
+.update{
+    padding: 5px;
+    margin: 15px;
+    border-radius: 40px;
+    height: 30px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrfefhA78olIhq6Ts4X3LaWpf9ctALFlrss08f_xLIrYnCaxTW1Q");
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+.tit{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
 }
 
   .head{
@@ -209,9 +281,6 @@ height: 30px;
     border-radius: 5%;
  }
 
-    border-radius: 40%;
-    width: 200px;
-}
 .mangerGraph
 {
     display: grid;

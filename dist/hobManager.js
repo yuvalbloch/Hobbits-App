@@ -97,6 +97,13 @@ class hobManager {
                    $("#userContainer").append("<button id = 'allCharts'>charts of evrybody</button>")
                }
            }
+           else {
+               alert("password did not curect")
+           }
+       }
+       else
+       {
+           alert("user name in not exsist")
        }
     }
     async showAll()

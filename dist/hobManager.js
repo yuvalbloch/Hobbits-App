@@ -94,7 +94,9 @@ class hobManager {
             peaceandlove()
                if ( user.isManager)
                {
-                   $("#userContainer").append("<button id = 'allCharts'>charts of evrybody</button>")
+                   $("#userContainer").append(`<button id = 'allCharts'>Manager button <i class="fas fa-user-secret"></i>
+
+                   </button>`)
                }
            }
            else {

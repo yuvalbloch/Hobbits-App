@@ -45,7 +45,7 @@ $("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
 $.get('/quote', function(res){
     const quote = JSON.parse(res.body).contents.quotes[0].quote
     dailyQuote = quote
-    $("#quotes").append(`<p>${dailyQuote}</p>`)
+    $("#quotes").append(`<p>"${dailyQuote}"</p>`)
 })
 
 async function loadPage(){
@@ -68,7 +68,7 @@ $("#update").on("click" ,function () {
     const newpassWord = $("#newPass").val()
     const newcompany= $("#newComp").val()
     HobManager.createUser(newUserName,newpassWord,newcompany)
-    alert("sigh up sucsess")
+    alert("sign up succeeded")
 })
 
 $("#signInButton").on("click" ,function () {

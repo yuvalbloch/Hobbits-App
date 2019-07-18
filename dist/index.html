@@ -97,7 +97,7 @@
     <script id="bests-template" type="text/x-handlebars-template">
         <div class="bestDiv">
             <div class="health">
-                <h2>Best in health!</h2>
+                <h2>Best in health! <i class="fas fa-seedling"></i>                </h2>
 
                 {{#each bestsInFood}}
             <p>{{this.userName}}</p>
@@ -105,13 +105,15 @@
             </div>
             <div class="sport">
 
-                    <h2>Best in sports!</h2>
+                    <h2>Best in sports! <i class="fas fa-running"></i>
+                    </h2>
                 {{#each bestsInSport}}
                 <p>{{this.userName}}</p>
                 {{/each}}
             </div>
             <div class="smile">
-                    <h2>Best in smiles!</h2>
+                    <h2>Best in smiles! <i class="far fa-smile-wink"></i>
+                    </h2>
                 {{#each bestsInSmile}}
                 <p>{{this.userName}}</p>
                 {{/each}}

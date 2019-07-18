@@ -8,7 +8,7 @@ const tasks = ["Say good morning to: ", "give a nice compliment to: ", "ask abou
 
 
 
-$('#updateButton').one('click', function () {
+$('#updateButton').on('click', function () {
     let water = $(this).siblings('#insertWater').val()
     let vegetables = $(this).siblings('#insertVeg').val()
     let floors = $(this).siblings('#insertFood').val()

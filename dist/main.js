@@ -33,6 +33,10 @@ function greet(user) {
     bringUser = bringUser.map(u=>u.userName)
     let indexU = Math.floor((Math.random() * bringUser.length))
     let indexT = Math.floor((Math.random() * 5))
+      if(bringUser[indexU] == username)
+      {
+          indexU++
+      }
 $("#nicethingsSection").append(`<p>${tasks[indexT]}${bringUser[indexU]}</p>`)
 }
 

@@ -72,15 +72,12 @@
     </div>
     <div id=charts>
         <div>
-            <p> health</p>
             <canvas id="healthChart" class="chart"></canvas>
         </div>
         <div>
-            <p> sport</p>
             <canvas id="sportChart" class="chart"></canvas>
         </div>
         <div>
-            <p> smile</p>
             <canvas id="smilesChart" class="chart"></canvas>
         </div>
     </div>
@@ -99,17 +96,17 @@
     </script>
     <script id="bests-template" type="text/x-handlebars-template">
         <div class="bestDiv">
-            <div class="health"><h2>best in healthy food</h2>
+            <div class="health">
                 {{#each bestsInFood}}
             <p>{{this.userName}}</p>
                 {{/each}}
             </div>
-            <div class="sport"><h2>best in sport</h2>
+            <div class="sport">
                 {{#each bestsInSport}}
                 <p>{{this.userName}}</p>
                 {{/each}}
             </div>
-            <div class="smile"><h2>the most smiling hobbit today</h2>
+            <div class="smile">
                 {{#each bestsInSmile}}
                 <p>{{this.userName}}</p>
                 {{/each}}
@@ -120,15 +117,12 @@
     <h2>{{userName}}</h2>
     <div class = "mangerGraph">
         <div>
-            <p> health</p>
         <canvas id="{{health}}" class="chart"></canvas>
     </div>
         <div>
-            <p> sport</p>
             <canvas id="{{sport}}" class="chart"></canvas>
         </div>
         <div>
-            <p> smile</p>
             <canvas id="{{smile}}" class="chart"></canvas>
         </div></div>
 </script>

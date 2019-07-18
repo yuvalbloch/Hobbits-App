@@ -4,7 +4,7 @@ let username = ""
 const HobManager = new hobManager()
 const Renderer = new renderer()
 let dailyQuote
-const tasks = ["Say good morning to: ", "give a nice compliment to: ", "ask about the day of: ", "what do you think about launch with: ", "did you already spoken to: "]
+const tasks = ["Say good morning to: ", "give a nice compliment to: ", "ask about the day of: ", "what do you think about launch with: ", "did you already speak to: "]
 
 
 

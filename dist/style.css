@@ -111,9 +111,9 @@ body {
     text-align: center;
     font-weight: bold;
     color: white;
+    font-family: 'Hind Vadodara';
     font-size: 60px;
     text-shadow: 8px 8px 8px black;
-    font-family: 'Poppins';
     margin: 0;
   text-shadow: 0 3px 0 #fe4902,
                0 4px 0 #fe4902,
@@ -241,6 +241,7 @@ padding:5px;
     text-align: center;
     grid-gap: 10px;
     font-family: 'Hind Vadodara';
+    color: white;
     
 }
 

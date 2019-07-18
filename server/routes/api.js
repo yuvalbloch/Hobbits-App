@@ -37,7 +37,7 @@ router.delete('/user/:userName', function (req, res) {
     })
 })
 
-router.get('/qoute',function(req,res){
+router.get('/quote',function(req,res){
     request.get('http://quotes.rest/qod.json', function(err, res2){
     res.send(res2)  
   })

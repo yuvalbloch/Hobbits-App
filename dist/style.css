@@ -142,7 +142,8 @@ body {
     font-weight: bold;
     font-size: 40px;
     color: white;
-    font-family: 'Hind Vadodara';
+    font-family: 'Indie Flower';
+    font-style: italic;
 }
 #slogen{
     text-align: center;
@@ -199,6 +200,8 @@ padding:5px;
 #nicethingsSection{
     font-weight: bold;
     font-family: 'Hind Vadodara';
+    color: white;
+    font-size: 20px;
 }
 
 .avatar {
@@ -307,4 +310,7 @@ height: 30px;
     margin-left: 150px; 
     height: 60px;
     font-family: 'Hind Vadodara';
+}
+#well{
+    text-align: left
 }

@@ -26,7 +26,7 @@ $('#updateButton').one('click', function () {
 })
 
 function greet(user) {
-    $("#welcomeUser").append(`<p>Welcome back ${user}, we missed you!</p>`)
+    $("#welcomeUser").append(`<p id ="well">Welcome back ${user}, we missed you!</p>`)
 }
   async function peaceandlove(){
     let bringUser = await $.get('/users')

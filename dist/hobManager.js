@@ -74,7 +74,7 @@ class hobManager {
     createUser(name , password ,company)
     {
         const obj = {
-            isManager : true,
+            isManager : false,
             company: company,
             userName: name,
             password:  password,
